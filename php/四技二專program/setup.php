@@ -57,4 +57,12 @@
     類別名稱 VARCHAR(8) NOT NULL,
     類型 TINYINT,
     PRIMARY KEY(類別ID)');
+
+    createTable('112甄選', 
+    '類群ID CHAR(2) NOT NULL,
+    分校ID SMALLINT NOT NULL,
+    科系ID INT NOT NULL,
+    FOREIGN KEY(類群ID) REFERENCES 甄選(類群ID),
+    FOREIGN KEY(分校ID) REFERENCES 分校(分校ID),
+    FOREIGN KEY(科系ID) REFERENCES 科系(科系ID)');
 ?>
